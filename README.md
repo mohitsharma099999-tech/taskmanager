@@ -2,7 +2,7 @@
 
 A modern, responsive task-management web app built with **vanilla JavaScript (ES modules)**, **HTML5**, **CSS3**, and a **REST API** — with full local persistence, live filtering, and reusable UI components.
 
-> 🔗 **Live Demo:** https://https://github.com/mohitsharma099999-tech/taskmanager/
+> 🔗 **Live Demo:** https://mohitsharma099999-tech.github.io/taskmanager/
 
 ---
 
