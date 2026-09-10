@@ -285,7 +285,7 @@ This project is licensed under the **MIT License** — free to use, modify, and 
 ```
 MIT License
 
-Copyright (c) 2025 YOUR-NAME
+Copyright (c) 2025 mohit-sharma
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
