@@ -87,7 +87,7 @@ task-manager/
 
 ```bash
 # Clone
-git clone https://github.com/YOUR-USERNAME/taskmanager.git
+git clone https://github.com/mohitsharma099999-tech/taskmanager.git
 cd task-manager
 
 # Serve (pick one)
