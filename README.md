@@ -6,12 +6,7 @@ A modern, responsive task-management web app built with **vanilla JavaScript (ES
 
 ---
 
-## 📸 Preview
 
-> _Add a screenshot or GIF here after deploying. Example:_
-> `![Task Manager preview](./assets/preview.png)`
-
----
 
 ## ✨ Features
 
