@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>✅ Task Manager</h1>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="dot"></span><span id="statusText">Ready</span>
+      </div>
+    </header>
+
+    <!-- Task Form -->
+    <section class="card">
+      <h2 id="formTitle">Add New Task</h2>
+      <form id="taskForm" novalidate>
+        <input type="hidden" id="taskId" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="title">Title *</label>
+            <input type="text" id="title" maxlength="80" placeholder="e.g. Finish project report" />
+            <small class="error" id="titleError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" rows="3" maxlength="300" placeholder="Optional details…"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row three">
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="todo">To Do</option>
+              <option value="in-progress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="submitBtn">Add Task</button>
+          <button type="button" class="btn-secondary" id="cancelEdit" hidden>Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Controls -->
+    <section class="card controls">
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="🔍 Search tasks…" />
+      </div>
+
+      <div class="filters">
+        <select id="filterStatus">
+          <option value="all">All statuses</option>
+          <option value="todo">To Do</option>
+          <option value="in-progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+
+        <select id="filterPriority">
+          <option value="all">All priorities</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <select id="sortBy">
+          <option value="created-desc">Newest first</option>
+          <option value="created-asc">Oldest first</option>
+          <option value="due-asc">Due date ↑</option>
+          <option value="priority">Priority</option>
+        </select>
+
+        <button type="button" class="btn-secondary" id="clearFilters">Clear</button>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="stats">
+      <div class="stat"><span id="countAll">0</span><label>Total</label></div>
+      <div class="stat todo"><span id="countTodo">0</span><label>To Do</label></div>
+      <div class="stat progress"><span id="countProgress">0</span><label>In Progress</label></div>
+      <div class="stat done"><span id="countDone">0</span><label>Done</label></div>
+    </section>
+
+    <!-- Loading / Error -->
+    <div class="loading" id="loading" hidden>
+      <div class="spinner"></div><p>Loading tasks…</p>
+    </div>
+    <div class="error-banner" id="errorBanner" hidden>
+      <span id="errorText">Something went wrong.</span>
+      <button id="retryBtn" class="btn-secondary">Retry</button>
+    </div>
+
+    <!-- Task list -->
+    <section class="task-list" id="taskList"></section>
+    <p class="empty" id="emptyMessage" hidden>No tasks match your filters.</p>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
