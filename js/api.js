@@ -1,7 +1,4 @@
-/**
- * API layer. Uses JSONPlaceholder as a demo REST endpoint.
- * Falls back to localStorage if the network is unreachable.
- */
+
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 const TIMEOUT = 8000;
